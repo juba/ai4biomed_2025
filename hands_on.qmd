@@ -1,0 +1,103 @@
+---
+title: AI4BioMed 2025 - Hands-on sessions installation instructions
+format:
+    html:
+        embed-resources: true
+        theme: cosmo
+---
+
+<style>
+#title-block-header {
+    margin-bottom: 3rem;
+}
+#title-block-header h1 {
+    font-size: 2.5rem;
+}
+
+
+h2 {
+    margin: 4rem 0 1rem 0;
+}
+
+h3 {
+    margin: 2.5rem 0 1rem 0;
+    font-size: 1.4rem;
+}
+
+</style>
+
+This file is available here: 
+
+<https://lhst.eu/ai4biomed/hands_on.html>
+
+
+## Install uv
+
+This should already be done, but here are the installation instructions if necessary:
+
+::: {.panel-tabset}
+
+## Linux or MacOS
+
+Open a terminal and run:
+
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then, open a new terminal and verify the installation:
+
+```sh
+uv --version
+```
+
+## Windows
+
+Open a terminal (right click on the windows menu icon and select *Terminal*) then run:
+
+```sh
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+After that, open a new terminal and verify the installation with:
+
+```sh
+uv --version
+```
+
+:::
+
+
+## Download notebooks and data
+
+Download and extract the following archive:
+
+TODO
+
+## Launch Jupyter lab
+
+Open a new terminal at the root of the extracted archive and run:
+
+```sh
+uv run jupyter-lab
+```
+
+## If something fails...
+
+If for some reason one of the previous steps fails, you still have the possibility to work on the notebooks in Google Colab (you will need an active internet connexion and a Google account).
+
+You can import them from the `ipynb` file on your computer by using Colab's *Import notebook* feature, or you can open them directly by clicking these links:
+
+- [01_tensors.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/01_tensors.ipynb)
+- [02_learning_rate.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/02_learning_rate.ipynb)
+- [03_data_normalization.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/03_data_normalization.ipynb)
+- [04_optimizers.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/04_optimizers.ipynb)
+- [05_nn_regression.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/05_nn_regression.ipynb)
+- [06_activation_functions.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/06_activation_functions.ipynb)
+- [07_overfitting.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/07_overfitting.ipynb)
+- [08_batch_dataset_dataloader.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/08_batch_dataset_dataloader.ipynb)
+- [09_metrics.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/09_metrics.ipynb)
+- [10_sign_mnist_example.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/10_sign_mnist_example.ipynb)
+- [11_malaria_cells_example.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/11_malaria_cells_example.ipynb)
+
+
