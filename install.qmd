@@ -1,0 +1,143 @@
+---
+title: AI4BioMed 2025 - Installation instructions
+format:
+    html:
+        embed-resources: true
+        theme: cosmo
+---
+
+<style>
+#title-block-header {
+    margin-bottom: 3rem;
+}
+#title-block-header h1 {
+    font-size: 2.5rem;
+}
+
+
+h2 {
+    margin: 4rem 0 1rem 0;
+}
+
+h3 {
+    margin: 2.5rem 0 1rem 0;
+    font-size: 1.4rem;
+}
+
+</style>
+
+
+
+## Hands-on sessions (monday and tuesday)
+
+During these sessions we will use [Jupyter notebooks](https://jupyter.org), and [uv](https://docs.astral.sh/uv/) to manage python versions and dependencies.
+
+::: {.callout-warning}
+## Important
+
+We ask you to follow these steps on the machine you will use **before the start of the school**. Contact us by email ([julien.barnier@cnrs.fr](mailto:julien.barnier@cnrs.fr)) if you encounter any issues.
+:::
+
+<ol>
+<li>Install [uv](https://docs.astral.sh/uv/getting-started/installation/):
+
+::: {.panel-tabset}
+
+## Linux or MacOS
+
+Open a terminal and run:
+
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Then, open a new terminal and verify the installation:
+
+```sh
+uv --version
+```
+
+## Windows
+
+Open a terminal (right click on the windows menu icon and select *Terminal*) then run:
+
+```sh
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+After that, open a new terminal and verify the installation with:
+
+```sh
+uv --version
+```
+
+:::
+</li>
+<li>
+
+Download and extract the following archive:
+
+<p><https://lhst.eu/ai4biomed/test_install.zip></p>
+
+</li>
+<li>
+Open a terminal in the `test_install` folder and run:
+
+```sh
+uv run -m adl.test_install
+```
+
+Wait for the command to finish. If you no error messages appear, you should be ready to go.
+</li>
+</ol>
+
+
+::: {.callout-note}
+## Note
+
+Additional data will have to be downloaded at the start of the first hands-on session.
+:::
+
+
+## Applications hands-on sessions (wednesday morning)
+
+
+### TP1: Using deep-learning to estimate epidemiological parameters from pathogen phylogenetic trees
+
+*Anna Zhukova (Institut Pasteur)*
+
+If possible try to install Apptainer or Docker on your machine (note that docker installation requires administrative rights):
+
+- [Apptainer installation on Linux](https://apptainer.org/docs/admin/main/installation.html#install-unprivileged-from-pre-built-binaries)
+- [Apptainer installation on Windows](https://apptainer.org/docs/admin/main/installation.html#windows)
+- [Apptainer installation on Mac](https://apptainer.org/docs/admin/main/installation.html#mac)
+- [Docker desktop installation on Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Docker desktop installation on Mac](https://docs.docker.com/desktop/setup/install/mac-install/)
+- [Docker engine installation on Linux](https://docs.docker.com/engine/install/)
+
+If installation is not possible, you can try to install the `phylodeep` package directly:
+
+<https://github.com/evolbioinfo/phylodeep?tab=readme-ov-file#installation>
+
+An online tool will be available too if these installations are not possible.
+
+
+### TP2: The autoencoder
+
+*Stefan Duffner (INSA Lyon)*
+
+The prerequisites for this session will be the same as the ones for the hands-on sessions, so no specific install should be necessary.
+
+### TP3: Penalized splines for flexible modelling while limiting overfitting: application to survival analysis in cancer patients
+
+*Matthieu Fauvernier and Pascal Roy (HCL, Université Claude Bernard)*
+
+For this session you will need R (at least version 4.0.3):
+
+- [R installation](https://cloud.r-project.org)
+- [Rstudio installation](https://posit.co/download/rstudio-desktop/)
+
+You will also need to install the following packages:
+
+- Package `Matrix` (at least version 1.2-18)
+- Package `survPen` (at least version 1.5.1)

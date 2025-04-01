@@ -1,0 +1,12 @@
+[project]
+name = "2025-ai4biomed"
+version = "0.1.0"
+description = ""
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "adl",
+]
+
+[tool.uv.sources]
+adl = { git = "https://gitlab.in2p3.fr/jbarnier/ateliers_deep_learning" }
