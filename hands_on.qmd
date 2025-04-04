@@ -26,10 +26,14 @@ h3 {
 
 </style>
 
+
+::: {.callout-note}
+## Note
+
 This file is available here: 
 
 <https://lhst.eu/ai4biomed/hands_on.html>
-
+:::
 
 ## Install uv
 
@@ -72,7 +76,7 @@ uv --version
 
 Download and extract the following archive:
 
-TODO
+<https://lhst.eu/ai4biomed/hands_on.zip>
 
 ## Launch Jupyter lab
 
@@ -100,4 +104,9 @@ You can import them from the `ipynb` file on your computer by using Colab's *Imp
 - [10_sign_mnist_example.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/10_sign_mnist_example.ipynb)
 - [11_malaria_cells_example.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/11_malaria_cells_example.ipynb)
 
+## Full notebooks
+
+A repository with the full notebooks (with cell outputs and exercise solutions) is available here:
+
+<https://gitlab.in2p3.fr/jbarnier/ateliers_deep_learning>
 
