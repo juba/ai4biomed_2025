@@ -11,20 +11,9 @@ resolution-markers = [
 ]
 
 [[package]]
-name = "2025-ai4biomed"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "adl" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "adl", git = "https://gitlab.in2p3.fr/jbarnier/ateliers_deep_learning" }]
-
-[[package]]
 name = "adl"
 version = "0.0.1"
-source = { git = "https://gitlab.in2p3.fr/jbarnier/ateliers_deep_learning#a8f5b86c40e9288ce8cee3851425b4841b6d47fd" }
+source = { editable = "." }
 dependencies = [
     { name = "ipykernel" },
     { name = "ipywidgets" },
@@ -42,6 +31,25 @@ dependencies = [
     { name = "torchmetrics" },
     { name = "torchvision", version = "0.21.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(platform_machine == 'aarch64' and sys_platform == 'linux') or sys_platform == 'darwin'" },
     { name = "torchvision", version = "0.21.0+cpu", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "(platform_machine != 'aarch64' and sys_platform == 'linux') or (sys_platform != 'darwin' and sys_platform != 'linux')" },
+    { name = "tqdm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "ipykernel" },
+    { name = "ipywidgets" },
+    { name = "jupyterlab", specifier = ">=4.2.2" },
+    { name = "jupyterlab-execute-time", specifier = ">=3.2.0" },
+    { name = "matplotlib", specifier = ">=3.8" },
+    { name = "plotnine", specifier = ">=0.13.1" },
+    { name = "polars", specifier = ">=1.0.0" },
+    { name = "pyarrow" },
+    { name = "requests" },
+    { name = "scikit-learn" },
+    { name = "torch", index = "https://download.pytorch.org/whl/cpu" },
+    { name = "torchinfo" },
+    { name = "torchmetrics" },
+    { name = "torchvision", index = "https://download.pytorch.org/whl/cpu" },
     { name = "tqdm" },
 ]
 

@@ -1,12 +1,95 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "2025-ai4biomed"
-version = "0.1.0"
-description = ""
+name = "adl"
+version = "0.0.1"
+description = ''
 readme = "README.md"
 requires-python = ">=3.11"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Julien Barnier", email = "julien.barnier@cnrs.fr" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+]
 dependencies = [
-    "adl",
+    "torch",
+    "torchmetrics",
+    "scikit-learn",
+    "polars>=1.0.0",
+    "pyarrow",
+    "torchinfo",
+    "ipykernel",
+    "ipywidgets",
+    "matplotlib>=3.8",
+    "plotnine>=0.13.1",
+    "tqdm",
+    "jupyterlab>=4.2.2",
+    "torchvision",
+    "jupyterlab-execute-time>=3.2.0",
+    "requests",
 ]
 
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
 [tool.uv.sources]
-adl = { git = "https://gitlab.in2p3.fr/jbarnier/ateliers_deep_learning" }
+torch = [
+  { index = "pytorch-cpu" },
+]
+torchvision = [
+  { index = "pytorch-cpu" },
+]
+
+[tool.black]
+target-version = ["py312"]
+line-length = 110
+skip-string-normalization = true
+
+[tool.ruff]
+exclude = ["__pycache__", "__pypackages__", ".git"]
+target-version = "py312"
+line-length = 110
+lint.select = [
+    "A",
+    "ARG",
+    "B",
+    "C",
+    "DTZ",
+    "E",
+    "EM",
+    "F",
+    "FBT",
+    "I",
+    "ICN",
+    "ISC",
+    "N",
+    "PLC",
+    "PLE",
+    "PLR",
+    "PLW",
+    "Q",
+    "RUF",
+    "S",
+    "T",
+    "TID",
+    "UP",
+    "W",
+    "YTT",
+]
+lint.ignore = [
+  "T201",
+  "A001",
+  "PLR0913",
+  "N806",
+  "PLW2901",
+  "S311"
+]
+
