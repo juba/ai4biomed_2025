@@ -13,3 +13,4 @@ data/
 administratif/
 *.html
 *.zip
+.ipynb_checkpoints
