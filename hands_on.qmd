@@ -35,7 +35,7 @@ This file is available here:
 <https://lhst.eu/ai4biomed/hands_on.html>
 :::
 
-## Install uv
+## 1. Install uv
 
 This should already be done, but here are the installation instructions if necessary:
 
@@ -72,13 +72,13 @@ uv --version
 :::
 
 
-## Download notebooks and data
+## 2. Download notebooks and data
 
 Download and extract the following archive:
 
 <https://lhst.eu/ai4biomed/hands_on.zip>
 
-## Launch Jupyter lab
+## 3. Launch Jupyter lab
 
 Open a new terminal at the root of the extracted archive and run:
 
@@ -86,11 +86,13 @@ Open a new terminal at the root of the extracted archive and run:
 uv run jupyter-lab
 ```
 
+A new tab should open in your browser with a local instance of Jupyter-lab. Otherwise, open the link that should have been displayed in your terminal with an url beginning with `http://localhost:8888/lab?token=...`.
+
 ## If something fails...
 
 If for some reason one of the previous steps fails, you still have the possibility to work on the notebooks in Google Colab (you will need an active internet connexion and a Google account).
 
-You can import them from the `ipynb` file on your computer by using Colab's *Import notebook* feature, or you can open them directly by clicking these links:
+You can import the notebooks from the `ipynb` file on your computer by using Colab's *Import notebook* feature, or you can open them directly by clicking these links:
 
 - [01_tensors.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/01_tensors.ipynb)
 - [02_learning_rate.ipynb](https://colab.research.google.com/github/juba/ai4biomed_2025/blob/main/02_learning_rate.ipynb)
